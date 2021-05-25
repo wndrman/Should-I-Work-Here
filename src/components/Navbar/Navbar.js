@@ -55,7 +55,7 @@ const Navbar = () => {
                             </NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to='/extra'>
+                            <NavLinks to='/faq'>
                                 FAQ
                             </NavLinks>
                         </NavItem>

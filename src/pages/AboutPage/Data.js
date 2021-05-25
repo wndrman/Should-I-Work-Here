@@ -1,5 +1,6 @@
-export const homeObjOne = {
-    lightBg: true,
+export const aboutObjOne = {
+
+    lightBg: false,
     primary: true, 
     imgStart:'start', 
     lightTopLine: true, 
@@ -13,10 +14,3 @@ export const homeObjOne = {
     alt:'Image', 
     start:'true', 
 };
-
-
-
-
-// https://blog.tubikstudio.com/creative-landing-page-design/
-
-

@@ -2,11 +2,11 @@ import React, {useState, useEffect} from 'react';
 import Review from './Review';
 import {
     Container,
-    SearchContainer, 
-    SearchWrapper, 
-    SearchBox, 
+     
+    SearchForm, 
+    
     SearchButton, 
-    SearchTerm, 
+    SearchBar, 
     SearchIcon,
     ReviewContainer,
     /*ReviewHeader,
@@ -34,6 +34,10 @@ ThumbsUpIcon*/} from './ReviewSection.elements'
 const ReviewSection = () => {
     
     const [reviews, setReviews] = useState([]);
+
+    const [search, setSearch] = useState('')
+
+    const [ query, setQuery] = useState('Spotify')
     
         
 
@@ -41,39 +45,58 @@ useEffect(  () => {
 
      getReviews();
     
-}, []);
+}, [query]);
 
 const getReviews = async () => {
     const response = await fetch(
-    `https://0mx7c07qka.execute-api.eu-north-1.amazonaws.com/company?q=Spotify`
+    `https://0mx7c07qka.execute-api.eu-north-1.amazonaws.com/company?q=${query}`
     );
     const data = await response.json();
     setReviews(data.Items);
     console.log(data.Items);
 }
 
+const updateSearch = e => {
+
+    setSearch(e.target.value);
+    console.log(search)
+
+}
+
+const getSearch = e => {
+    e.preventDefault();
+    setQuery(search);
+    setSearch('');
+}
+
     return (
 <Container>
-    <SearchContainer>
-            <SearchWrapper>
-                <SearchBox>
-                    <SearchTerm type="text" placeholder="Search for any company e.g Spotify" />
+            <SearchForm onSubmit={getSearch}>
+                    <SearchBar 
+                    type="text" 
+                    placeholder="Search for any company e.g Spotify" 
+                    value={search} 
+                    onChange={updateSearch} />
                         <SearchButton type="submit">
-                            <SearchIcon />
-                        </SearchButton>
-                </SearchBox>
-            </SearchWrapper>
-        </SearchContainer>
+                            <SearchIcon /* Seearch button */ />
+                    </SearchButton>  
+            </SearchForm>
+        
             
         <ReviewContainer>
         {reviews.map(r => 
     <Review
     jobDescription={r.jobDescription}
     company={r.company}
-    reviewBody={r.reviewBody}
     country={r.country}
+    reviewBody={r.reviewBody}
+    reaction1={r.reaction1}
+    reaction2={r.reaction2}
+    reaction3={r.reaction3}
+    reaction4={r.reaction4}
+    reviewId={r.reviewId}
     />
-    )};
+    )}
 
          </ReviewContainer> 
          

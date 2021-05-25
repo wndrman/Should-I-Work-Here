@@ -25,7 +25,7 @@ color: #fff;
 
 export const FooterSubheading = styled.p`
 
-font-family: 'sans-serif';
+
 margin-bottom: 24px;
 font-size: 24px;
 

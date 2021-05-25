@@ -1,0 +1,153 @@
+.review {
+
+    border-radius: 10px;
+    margin: 30px;
+    padding: 16px;
+    border: 2px solid #045959;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: transparent;
+    max-width: 40%;
+   
+
+}
+
+.reviewHeader {
+
+    display: flex;
+    
+    justify-content: space-evenly;
+
+    margin: 0px 0px 20px 0px;
+}
+
+.jobDescription {
+    margin-right: 70px;
+    font-size: 24px;
+    
+}
+
+.company {
+    margin-right: 70px;
+    margin-top: 15px;
+}
+
+.country{
+
+    width: 24px;
+    height: 18px;
+    margin-top: 12px;
+    
+}
+
+.reviewFooter {
+    display: flex;
+    justify-self: center;
+    flex-direction: flex-start;
+    
+    
+}
+
+.RMcontainer{
+    display: flex;
+    justify-self: center;
+    
+    
+}
+
+.readMore {
+
+    cursor: pointer;
+    color: #045959;
+    font-weight: bold;
+    margin: 5px 5px 5px 0px;
+}
+
+.arrowdownIcon {
+    width: 30px;
+    cursor: pointer;
+  
+    background-image: url('../AboutSection/arrow-down-accordion.svg');
+    background-position: center;
+    background-size: 18px;
+    background-repeat: no-repeat;
+}
+
+.reactions{
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 30px;
+}
+
+.inputCounter{
+width: 30px;
+border: none;
+background: none;
+font-weight: bold;
+padding-bottom: 10px;
+pointer-events: none;
+
+}
+
+.reaction1 {
+    background-image: url('./Reactions/100emoji.svg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+    cursor: pointer;
+    width: 30px;
+    
+}
+
+.reaction1:active{
+    transform: scale(1.1);
+}
+.reaction2 {
+    background-image: url('./Reactions/clapEmoji.svg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+    cursor: pointer;
+    width: 30px;
+    
+}
+
+.reaction2:active{
+    transform: scale(1.1);
+}
+.reaction3 {
+    background-image: url('./Reactions/TdownEmoji.svg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+    cursor: pointer;
+    width: 30px;
+    
+}
+
+.reaction3:active{
+    transform: scale(1.1);
+}
+
+.reaction4 {
+    background-image: url('./Reactions/GheartEmoji.svg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+    cursor: pointer;
+    width: 30px;
+    
+}
+
+.reaction4:active{
+    transform: scale(1.1);
+}
+
+
+

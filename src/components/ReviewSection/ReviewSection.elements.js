@@ -5,10 +5,13 @@ import { IoIosArrowDown } from 'react-icons/io';
 import { FiThumbsUp, FiThumbsDown } from 'react-icons/fi'
 
 export const Container = styled.div`
-padding: 0px 50px;
+min-height: 100vh;
+background: #F8F5F2;
+
+
 `;
 
-export const SearchContainer = styled.div`
+/* export const SearchContainer = styled.div`
 background-color: #f8f5f2;
 max-width: 1200px;
 padding: 0;
@@ -19,17 +22,19 @@ align-items: center;
 
 
 `;
+*/
 
-export const SearchWrapper = styled.div`
-   position: relative;
-   display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
+export const SearchForm = styled.form`
+  
+
+min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
     
 `;
 
-export const SearchTerm = styled.input`
+export const SearchBar = styled.input`
    width: 50%;
     border: 2px solid #045959;
     border-right: none;
@@ -42,12 +47,12 @@ export const SearchTerm = styled.input`
     
     `
 
-export const SearchBox = styled.div`
+/*export const SearchBox = styled.div`
    width: 100%;
     position: relative;
     display: flex;
 
-`
+` */
 
 export const SearchButton = styled.button`
  width: 50px;
@@ -74,11 +79,12 @@ font-size: 1.8rem;
 
 export const ReviewContainer = styled.div`
 display: flex;
-justify-content: flex-start;
+justify-content: space-around;
+flex-wrap: wrap;
 
 
 `;
-
+/*
 export const ReviewCard = styled.div` //kommer en ternary för ifall det är litet eller stort
     border-radius: 10px;
     border: 2px solid #045959;
@@ -201,7 +207,7 @@ export const ThumbsUpIcon = styled(FiThumbsUp)`
     color: #045959;
 }
 `;
-
+*/
 
 /* Colors from figma
 
